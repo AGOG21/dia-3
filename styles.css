@@ -1,0 +1,249 @@
+body{
+    color: aliceblue;
+    background-image: url(fondo2.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    background-attachment: fixed;
+}
+
+html {
+    height:100%;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+}
+.container .card{
+    position: relative;
+    width: 320px;
+    height: 450px;
+    background:rgb(150, 110, 190);
+    border-radius: 600px;
+    overflow: hidden;
+}
+.container .card:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(163, 115, 211, 0);
+    clip-path: circle(150px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}
+.container .card:hover:before{
+    clip-path: circle(300px at 80% -20%);
+}
+.container .card:after{
+    content: "SV";
+    position: absolute;
+    top: 69%;
+    left: 36%;
+    font-size: 75px;
+    font-weight: 800;
+    font-style: italic;
+    color: rgba(255, 255, 255, 0.077);
+
+}
+.container .card .imgBx{
+    position: absolute;
+    top: 30%;
+    transform: translateY(-40%);
+    z-index: 1000;
+    width: 100%;
+    height: 110%;
+    transition: .5s;
+}
+.container .card:hover .imgBx{
+    top: 0%;
+    transform: translateY(-22%);
+}
+.container .card .imgBx img{
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 270px;
+}
+.container .card .contentBx{
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    height: 100px;
+    text-align: center;
+    transition: 1s;
+    z-index: 90;
+}
+.container .card:hover .contentBx{
+    height: 220px;
+}
+.container .card .contentBx h2{
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #ffffff;
+}
+.container .card .contentBx .size,
+.container .card .contentBx .color{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    transition: .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.container .card:hover .contentBx .size{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .5s;
+}
+.container .card:hover .contentBx .color{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: .6s;
+}
+.container .card .contentBx .size h3,
+.container .card .contentBx .color h3{
+    color: rgb(255, 255, 255);
+    font-weight: 300;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-right: 10px;
+}
+.container .card .contentBx .size span{
+    width: 26px;
+    height: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+    display: inline-block;
+    color: #111;
+    background: #fff;
+    margin: 0 5px;
+    transition: .5s;
+    color: #ffffff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.container .card .contentBx .size span:hover{
+    background: #B90000;
+}
+.container .card .contentBx .color span{
+    width: 20px;
+    height: 20px;
+    background: #ff0;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+.container .card .contentBx .color span:nth-child(2){
+    background: #1BBFE9;
+}
+.container .card .contentBx .color span:nth-child(3){
+    background: #1B2FE9;
+}
+.container .card .contentBx .color span:nth-child(4){
+    background: #080481;
+}
+.container .card .contentBx {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-top: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translateY(65px);
+    transition: .5s;
+}
+.container .card:hover .contentBx {
+    text-align: center;
+    opacity: 1;
+    transform: translateY(65px);
+    transition-delay: .7s;
+}
+
+@keyframes animate {
+    0% {
+    background-position: -500%;
+    }
+    100% {
+    background-position: 500%;
+    }
+}
+h1{
+    
+        display: flex;
+        justify-content: center;
+        font-size: 60px;
+        font-family: 'Sedgwick Ave Display', cursive;
+        animation: change-color 2.0s infinite;
+        color: rgb(150, 110, 190);
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-size: 90px;
+    font-family: 'Sedgwick Ave Display', cursive;
+    animation: change-color 2.0s infinite;
+    color: blue;
+}
+
+@keyframes change-color{
+    0%{
+        color:  rgb(100, 70, 120); 
+    }
+    30%{
+        color:  rgb(180, 170, 250); 
+    }
+    60%{
+        color:  rgb(150, 110, 190); 
+    }
+    100%{
+        color:  rgb(210, 120, 255); 
+    }
+}
+
+hr{
+    border-color: rgb(210, 120, 255);
+    left: 2px;
+}
+
+button{
+    border-radius: 500px;
+    border-right: 1px;
+    border-top: 1px;
+    border-left: 1px;
+    border-width: 1px;
+    border-bottom: 1px;
+    color: #111;
+}
+
+.pt{
+    color: #111;
+}
+
+.clase_table {
+    border-collapse: y;
+    border-spacing: 10;
+}
+.clase_table{
+    border: 1px solid aliceblue;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    padding: 10px;
+    border-radius: 1000px;
+}
+
+img{
+    width: 200px;
+        height: 260px; 
+        border-radius: 1000px;
+}
